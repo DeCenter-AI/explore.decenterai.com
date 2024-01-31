@@ -1,8 +1,8 @@
 {
-  "name": "decenterai.com",
+  "name": "explorer.decenterai.com",
   "version": "0.1.0",
-  "description": "Decenter AI landing page: www.decenterai.com",
-  "author": "laciferin@gmail.com",
+  "description": "Explorer for Decenter AI : www.explorer.decenterai.com",
+  "author": "williamikeji@gmail.com",
   "license": "MIT",
   "private": true,
   "scripts": {
