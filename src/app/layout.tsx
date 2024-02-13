@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { AppMetaData } from '@config/app'
 import '@rainbow-me/rainbowkit/styles.css'
-import Footer from '@/components/footer'
+import Footer from '@/components/ui/footer'
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = AppMetaData
 
