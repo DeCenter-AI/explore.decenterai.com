@@ -115,10 +115,3 @@
   border-radius: 100vw;
 }
 
-.header-bg{
-  background-image: url("/public/main-bg.png");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 400px;
-}
