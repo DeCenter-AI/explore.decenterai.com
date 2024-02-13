@@ -9,5 +9,14 @@ const nextConfig = {
     locales: ['en-US', 'zh-CN'],
     defaultLocale: 'en-US',
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+      },
+    ],
+  },
 }
 module.exports = nextConfig

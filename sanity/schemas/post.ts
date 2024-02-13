@@ -6,7 +6,7 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'name',
+      name: 'title',
       title: 'Name',
       type: 'string',
     }),
@@ -15,7 +15,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
         maxLength: 96,
       },
     }),
@@ -50,13 +50,14 @@ export default defineType({
       name: 'website',
       title: 'Website',
       type: 'string',
+      placeholder: 'https://sitename.com',
     }),
 
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    }),
+    // defineField({
+    //   name: 'publishedAt',
+    //   title: 'Published at',
+    //   type: 'datetime',
+    // }),
     defineField({
       name: 'discord',
       title: 'Discord',
