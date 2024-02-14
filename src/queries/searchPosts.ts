@@ -1,9 +1,9 @@
 import { client } from '@/lib/sanity'
 
-export const getPaginatedPosts = async (start: number, end: number) => {
+export const searchPosts = async (text: string, start: number = 0, end: number = 9) => {
   const Query = `
-*[_type == "post"] | order(_createdAt desc){
-     "currentSlug": slug.current,
+*[_type == "post" && title match $text ] {
+       "currentSlug": slug.current,
        author->{
          name
        },
@@ -24,6 +24,7 @@ export const getPaginatedPosts = async (start: number, end: number) => {
 }[$start..$end]`
 
   const params = {
+    text,
     start,
     end,
   }
