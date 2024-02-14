@@ -7,13 +7,13 @@ import AppleTouchIcon from '@public/meta/apple-touch-icon.png'
 
 export const AppName = 'Decenter AI'
 const AppDescription = `
-DecenterAI: Decentralized Infra for AI Model Training
+DecenterAI: An Explorer For Top Latest AI Tools
 `.trim()
 
 export const AppMetaData: Metadata = {
   applicationName: AppName,
-  authors: [{ name: 'Hiro', url: 'https://bit.ly/m/laciferin' }],
-  keywords: ['DecenterAI', 'AI Infra'],
+  authors: [{ name: 'DecenterAi', url: 'https://decenterai.com' }],
+  keywords: ['DecenterAI', 'AI Infra', 'AI Tools'],
   title: AppName,
   description: AppDescription,
   icons: [
