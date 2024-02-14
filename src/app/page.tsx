@@ -1,14 +1,13 @@
-
-//import { AppMetaData } from '@config/app'
-import Footer from '@/components/ui/footer'
+import ExplorerTab from '@/components/ExplorerTab'
+import Header from '@/components/Header'
 import NftCard from '@/components/ui/nftCard'
 
-// export const metadata = AppMetaData
 export default function Home() {
   return (
-    <>
+    <main className="bg-primary_13 ">
+      <Header />
+      <ExplorerTab />
       <NftCard />
-      <Footer />
-    </>
+    </main>
   )
 }
