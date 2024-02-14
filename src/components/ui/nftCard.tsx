@@ -6,7 +6,7 @@ export default function NftCard() {
     return (
         <div className='max-w-[200px] flex flex-col border  px-6 py-4 rounded-3xl gap-3 border-primary_11 '>
             <div className=''>
-                <Image alt='' width={154} height={144} src='/Component 18.png' />
+                <Image alt='' priority width={154} height={144} src='/Component 18.png' />
             </div>
             <div className='flex gap-4 flex-col'>
                 <div className=' '>
