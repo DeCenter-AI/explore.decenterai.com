@@ -14,8 +14,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>Decenter AI</title>
       </head>
-      <body className={`${inter.className} flex flex-col justify-between min-h-screen`}>
-        <Nav/>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <Nav />
         {children}
         <Footer />
       </body>
