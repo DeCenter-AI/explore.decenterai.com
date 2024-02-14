@@ -8,5 +8,4 @@ const Nav = () => {
     </div>
   )
 }
-//done
 export default Nav
