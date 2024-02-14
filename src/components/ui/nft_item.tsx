@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export default function NftCard() {
@@ -11,13 +12,13 @@ export default function NftCard() {
                 <div className=' '>
                     <span className='text-xs text-primary_7 bg-primary_12 px-2 rounded-2xl py-1 text-center '>Ai category name</span>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between items-center'>
                     <div>
                         <span className='text-lg font-medium'>Jasper</span>
                     </div>
-                    <a href="">
-                        <Image src="/arrow_icon.png" alt='' width={24} height={24} />
-                    </a>
+                    <Link href="">
+                        <Image src="/arrow_icon.png" alt='' className='pt-1' width={24} height={24} />
+                    </Link>
 
                 </div>
             </div>
