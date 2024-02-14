@@ -2,12 +2,21 @@ import React from 'react'
 
 import bgImage from 'public/bg.png'
 import logo from 'public/dec-logo.png'
+import Image from 'next/image'
 const Header = () => {
   return (
     <header
-      className=" bg-center   bg-cover bg-no-repeat  bg-[url('/bg.png')]"
+      className="min-h-[400px] bg-center   bg-cover bg-no-repeat  ] relative"
     >
-      <div className="text-center flex flex-col gap-6 pt-20 pb-8 mx-auto">
+
+      <Image
+        src="/bg.png"
+        alt="Decenter ai "
+        layout="fill"
+        objectFit="cover"
+        objectPosition="left"
+      />
+      <div className=" absolute  bg-black/50  inset-0 text-center flex flex-col gap-6 pt-20 pb-8 mx-auto">
         <h1 className="text-primary_2 text-center text-3xl sm:text-4xl lg:text-5xl font-logirentBold ">
           Explorer
         </h1>
