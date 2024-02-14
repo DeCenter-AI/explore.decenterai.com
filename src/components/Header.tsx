@@ -5,8 +5,8 @@ import logo from 'public/dec-logo.png'
 const Header = () => {
   return (
     <header
-      className="bg-cover bg-center bg-no-repeat "
-      style={{ backgroundImage: `url(${bgImage})` }}>
+      className=" bg-center   bg-cover bg-no-repeat  bg-[url('/bg.png')]"
+    >
       <div className="text-center flex flex-col gap-6 pt-20 pb-8 mx-auto">
         <h1 className="text-primary_2 text-center text-3xl sm:text-4xl lg:text-5xl font-logirentBold ">
           Explorer
