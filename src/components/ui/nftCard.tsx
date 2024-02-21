@@ -4,6 +4,7 @@ import React from 'react'
 
 export default function NftCard() {
     return (
+       <Link href='/expolrer/1'>
         <div className='max-w-[200px] flex flex-col border  px-6 py-4 rounded-3xl gap-3 border-primary_11 '>
             <div className=''>
                 <Image alt='' priority width={154} height={144} src='/Component 18.png' />
@@ -24,5 +25,6 @@ export default function NftCard() {
             </div>
 
         </div>
+       </Link>
     )
 }
