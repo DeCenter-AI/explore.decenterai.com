@@ -15,13 +15,13 @@ export default function ViewPane({ selected, id }: {
     const fetchPosts = async () => {
         const data = await getAllPosts()
         // console.log(data)
-        setData(data)
+        data && setData(data)
     }
 
     const fetchPostByCat = async () => {
         const data = await getPostsByCategory(0, 9, selected, id ? id : "")
         // console.log(data[0].posts)
-        setData(data[0].posts)
+        data && setData(data[0].posts)
     }
 
     useEffect(() => {
