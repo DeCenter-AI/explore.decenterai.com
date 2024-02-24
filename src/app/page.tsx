@@ -7,7 +7,6 @@ export default function Home() {
     <main className="bg-primary_13 ">
       <Header />
       <ExplorerTab />
-      <AiCard />
     </main>
   )
 }
