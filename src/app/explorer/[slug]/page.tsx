@@ -35,7 +35,7 @@ const components: PortableTextComponents = {
         h6: ({ children }) => <h1 className="text-sm font-light  text-neutral-300">{children}</h1>
     }
 }
-export default function page({ params }: { params: { slug: string } }) {
+export default function Page({ params }: { params: { slug: string } }) {
     const searchParams = useSearchParams()
     const category = searchParams.get('category');
     const [data, setData] = useState<Post | null>(null)
