@@ -2,9 +2,27 @@ import React from 'react'
 import Image from 'next/image';
 import { IoIosArrowBack } from "react-icons/io";
 import { GrFavorite } from "react-icons/gr";
+import AiCard from '@/components/ui/aiCard';
 export default function page() {
     return (
         <div className='w-[90%] md:w-[80%] flex flex-col gap-8 mx-auto my-4'>
+            <header
+                className="h-[150px]  bg-center   bg-cover bg-no-repeat   relative"
+            >
+
+                <Image
+                    src="/detailBg.png"
+                    alt="Decenter ai "
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="top"
+                />
+                <div className=" absolute   inset-0  text-center flex flex-col gap-6 justify-center mx-auto">
+                    <h1 className="text-primary_2 text-center text-3xl sm:text-4xl lg:text-5xl font-logirentBold ">
+                        Explorer
+                    </h1>
+                </div>
+            </header>
             <div className='flex items-center gap-7'>
                 <div className='flex gap-2 cursor-pointer items-center'>
                     <IoIosArrowBack />
@@ -31,17 +49,8 @@ export default function page() {
 
             </div>
             <div className='md:flex gap-5 '>
-                <div className='md:w-[15%]  flex flex-col gap-3'>
-                    <div className='flex justify-center'>
-                        <Image alt='' priority width={156} height={144} src='/Component 18.png' />
-                    </div>
-                    <div className='flex items-center py-2 text-center justify-center bg-primary_11 rounded-lg'>
-                        <span>Visit Website</span>
-                        <Image src="/arrow_icon.png" alt='' className='pt-1' width={24} height={24} />
-                    </div>
 
-
-                </div>
+                <AiCard />
                 <div className='md:w-[85%] border flex mt-4 md:mt-0 flex-col gap-7 rounded-md border-primary_11 py-5 px-4'>
                     <div>
                         <h2 className='mb-4 '>About</h2>
