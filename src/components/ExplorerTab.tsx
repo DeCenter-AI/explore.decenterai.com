@@ -1,15 +1,19 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { FaAngleDown } from "react-icons/fa6";
 import Search from './Search'
 import { tabsData } from '@/data/tabsData'
 import ViewPane from './ViewPane';
+import SearchViewPane from './SearchViewPane';
 
 const ExplorerTab = () => {
+  const [searchText, setSearchText] = useState<string>("")
+
   return (
     <div className=" text-center py-6 flex flex-col items-center gap-6">
-      <Search />
+      <Search setSearchText={setSearchText} />
       <div className='relative w-full '>
         {/* <div className='absolute 2xl:hidden  top-14 left-5 lg:left-20 text-xs flex gap-2 items-center text-border cursor cursor-pointer font-semibold'> View all <FaAngleDown size={15} className="pt-1" /></div> */}
         <Tabs defaultValue="All items" className='flex flex-col items-center w-full'>
@@ -26,7 +30,8 @@ const ExplorerTab = () => {
           </ScrollArea>
           {tabsData.map((item) => (
             <TabsContent className='pt-10 ' value={item.value} key={item.id}>
-              <ViewPane selected={item.value} />
+              {searchText.length == 0 && <ViewPane selected={item.value} />}
+              {searchText.length > 0 && <SearchViewPane text={searchText} />}
             </TabsContent>
           ))}
         </Tabs>
