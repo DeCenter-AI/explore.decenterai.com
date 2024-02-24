@@ -29,7 +29,7 @@ const ExplorerTab = () => {
             </TabsContent>
           ))}
         </Tabs>
-        <div className='absolute lg:-right-12 hidden top-3 text-xs  lg:flex gap-2 items-center text-border cursor cursor-pointer font-semibold'> View all <FaAngleDown size={15} className="pt-1" /></div>
+        <div className='absolute lg:-right-14 hidden top-3 text-xs  lg:flex gap-2 items-center text-border cursor cursor-pointer font-semibold'> View all <FaAngleDown size={15} className="pt-1" /></div>
       </div>
     </div>
   )

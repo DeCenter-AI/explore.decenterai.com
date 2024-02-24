@@ -1,13 +1,13 @@
 import ExplorerTab from '@/components/ExplorerTab'
 import Header from '@/components/Header'
-import NftCard from '@/components/ui/nftCard'
+import AiCard from '@/components/ui/aiCard'
 
 export default function Home() {
   return (
     <main className="bg-primary_13 ">
       <Header />
       <ExplorerTab />
-      <NftCard />
+      <AiCard />
     </main>
   )
 }
