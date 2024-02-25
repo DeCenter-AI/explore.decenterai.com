@@ -1,6 +1,6 @@
 import { client } from '@/lib/sanity'
 
-export const getAllPosts = async () => {
+export const getAllPosts = async (start: number = 0, end: number = 9) => {
   const Query = `
 *[_type == "post"] | order(_createdAt desc){
      "currentSlug": slug.current,
@@ -9,20 +9,17 @@ export const getAllPosts = async () => {
        },
        mainImage,
        title,
-       about,
-       usage,
-       prompt,
-       discord,
-       linkedin,
-       telegram,
-       xapp,
        likes,
-       views,
        categories[]->{
          title
        }
-}`
+}[$start..$end]`
 
-  const data = await client.fetch(Query)
+  const params = {
+    start,
+    end,
+  }
+
+  const data = await client.fetch(Query, params)
   return data
 }
