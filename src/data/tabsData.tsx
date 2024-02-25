@@ -20,11 +20,11 @@ export interface Tab {
 }
 
 export const tabsData: Tab[] = [
-  {
-    id: 1,
-    icon: <CiHeart size={20} />,
-    value: 'favorites',
-  },
+  // {
+  //   id: 1,
+  //   icon: <CiHeart size={20} />,
+  //   value: 'favorites',
+  // },
   {
     id: 2,
     icon: <CiGrid41 size={20} />,
