@@ -10,7 +10,9 @@ export default function Home() {
       <Nav />
       <Header />
       <ExplorerTab />
+
       <Footer />
+
     </main>
   )
 }

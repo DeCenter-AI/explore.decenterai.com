@@ -17,6 +17,7 @@ import ViewPane from '@/components/ViewPane';
 import Nav from '@/components/Nav';
 import Footer from '@/components/ui/footer';
 
+
 const components: PortableTextComponents = {
     list: {
         // Ex. 1: customizing common list types
@@ -46,11 +47,13 @@ export default function Page({ params }: { params: { slug: string } }) {
         const data: Post = await getPostBySlug(params.slug, category ? category : "")
         setData(data)
     }
+
     useEffect(() => {
         fetchPosts()
     }, [])
 
     return (
+
         <>
             <Nav />
             <div className='w-[90%] md:w-[80%] flex flex-col gap-8 mx-auto mt-4  mb-12'>
@@ -143,7 +146,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     </div>
 
                 </div>
-
+                yy
                 <div className='mt-10'>
                     <h1 className='font-logirentBold text-sm font-semibold text-center'>Similar Tools</h1>
                     <div className='w-full py-10'>
@@ -153,5 +156,6 @@ export default function Page({ params }: { params: { slug: string } }) {
             </div>
             <Footer />
         </>
+
     )
 }
