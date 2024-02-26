@@ -14,8 +14,7 @@ import { RiDiscordLine } from "react-icons/ri";
 import { PiTelegramLogoLight } from "react-icons/pi";
 import { CiLinkedin } from "react-icons/ci";
 import ViewPane from '@/components/ViewPane';
-import Nav from '@/components/Nav';
-import Footer from '@/components/ui/footer';
+
 
 const components: PortableTextComponents = {
     list: {
@@ -48,11 +47,13 @@ export default function Page({ params }: { params: { slug: string } }) {
         setData(data)
     }
 
+
     useEffect(() => {
         fetchPosts()
     }, [])
 
     return (
+
         <>
             <Nav />
             <div className='w-[90%] md:w-[80%] flex flex-col gap-8 mx-auto mt-4  mb-12'>
@@ -140,12 +141,12 @@ export default function Page({ params }: { params: { slug: string } }) {
                                 {data?.prompts && <PortableText value={data?.prompts} components={components} />}
                             </div>
 
-                        </div>
+                     </div>
 
                     </div>
 
                 </div>
-
+yy
                 <div className='mt-10'>
                     <h1 className='font-logirentBold text-sm font-semibold text-center'>Similar Tools</h1>
                     <div className='w-full py-10'>
@@ -155,5 +156,6 @@ export default function Page({ params }: { params: { slug: string } }) {
             </div>
             <Footer />
         </>
+
     )
 }
