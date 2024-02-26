@@ -12,8 +12,8 @@ DecenterAI: An Explorer For Top Latest AI Tools
 
 export const AppMetaData: Metadata = {
   applicationName: AppName,
-  authors: [{ name: 'DecenterAi', url: 'https://decenterai.com' }],
-  keywords: ['DecenterAI', 'AI Infra', 'AI Tools'],
+  authors: [{ name: 'Explorer.DecenterAi', url: 'https://explorer.decenterai.com' }],
+  keywords: ['DecenterAI', 'Explorer', 'AI Infra', 'AI Tools'],
   title: AppName,
   description: AppDescription,
   icons: [
