@@ -12,7 +12,7 @@ const ExplorerTab = () => {
   const [searchText, setSearchText] = useState<string>("")
 
   return (
-    <div className=" text-center py-6 flex flex-col items-center gap-6">
+    <div className=" text-center pb-6 flex flex-col items-center gap-6">
       <Search setSearchText={setSearchText} />
       <div className='relative w-full '>
         {/* <div className='absolute 2xl:hidden  top-14 left-5 lg:left-20 text-xs flex gap-2 items-center text-border cursor cursor-pointer font-semibold'> View all <FaAngleDown size={15} className="pt-1" /></div> */}

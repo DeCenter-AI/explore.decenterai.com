@@ -24,7 +24,6 @@ export const AppMetaData: Metadata = {
     { rel: 'apple-touch-icon', url: AppleTouchIcon.src },
   ],
   manifest: '/meta/site.webmanifest',
-  themeColor: '#ffffff',
   other: {
     'msapplication-TileColor': '#da532c',
   },

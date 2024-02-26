@@ -47,8 +47,6 @@ export default function Page({ params }: { params: { slug: string } }) {
         // console.log(data)
         setData(data)
     }
-    console.log(data?.cat)
-
 
     useEffect(() => {
         fetchPosts()
