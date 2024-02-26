@@ -12,6 +12,7 @@ export default function AiCard({ detail }: { detail: any }) {
                     {/* @ts-ignore */}
                     <Image className='min-h-full min-w-full' alt={detail.title} priority width={154} height={144} src={urlFor(detail.mainImage).url()} />
 
+
                 </div>
                 <div className='flex gap-2 flex-col h-[30%]  items-start'>
                     <div className=' '>

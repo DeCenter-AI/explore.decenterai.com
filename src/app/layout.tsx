@@ -19,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>Decenter AI</title>
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
+
         {children}
+
       </body>
     </html>
   )
