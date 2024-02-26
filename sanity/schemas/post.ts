@@ -9,11 +9,13 @@ export default defineType({
       name: 'title',
       title: 'Name',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'description',
       title: 'Description',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -23,6 +25,7 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'author',
@@ -34,6 +37,7 @@ export default defineType({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
+      validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
       },
@@ -49,12 +53,14 @@ export default defineType({
       name: 'categories',
       title: 'Categories',
       type: 'array',
+      validation: (Rule) => Rule.required(),
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
     defineField({
       name: 'website',
       title: 'Website',
       type: 'string',
+      validation: (Rule) => Rule.required(),
       placeholder: 'https://sitename.com',
     }),
 
@@ -87,16 +93,19 @@ export default defineType({
       name: 'about',
       title: 'About',
       type: 'blockContent',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'usage',
       title: 'Usage',
       type: 'blockContent',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'prompts',
       title: 'Prompts',
       type: 'blockContent',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'likes',
