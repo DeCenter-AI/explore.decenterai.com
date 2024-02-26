@@ -55,7 +55,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     return (
         <>
             <Nav />
-            //! This should be split into individual components...
+            {/* This should be split into individual components... */}
             <div className='w-[90%] md:w-[80%] flex flex-col gap-8 mx-auto mt-4  mb-12'>
                 <header
                     className="h-[150px]  bg-center   bg-cover bg-no-repeat   relative"
