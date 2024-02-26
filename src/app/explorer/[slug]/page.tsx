@@ -44,10 +44,8 @@ export default function Page({ params }: { params: { slug: string } }) {
 
     const fetchPosts = async () => {
         const data: Post = await getPostBySlug(params.slug, category ? category : "")
-        // console.log(data)
         setData(data)
     }
-
     useEffect(() => {
         fetchPosts()
     }, [])
