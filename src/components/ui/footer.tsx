@@ -47,19 +47,19 @@ const Footer = () => {
                 <div className="w-full md:w-[20%] text-primary_7 font-archivo ">
                     <Link href="#about">
                         {' '}
-                        <p className="text-sm md:text-lg text-left md:text-center  pt-1">AboutUs</p>
+                        {/* <p className="text-sm md:text-lg text-left md:text-center  pt-1">AboutUs</p> */}
                     </Link>
                 </div>
                 <div className="w-full md:w-[25%] text-primary_7 font-archivo ">
                     <Link href="#team">
                         {' '}
-                        <p className="text-sm md:text-lg text-left md:text-center pt-1">Team</p>
+                        {/* <p className="text-sm md:text-lg text-left md:text-center pt-1">Team</p> */}
                     </Link>
                 </div>
                 <div className="w-full md:w-[25%] text-primary_7 font-archivo ">
-                    <Link href="#contact">
-                        <p className="text-sm md:text-lg    pt-1">Contact US</p>
-                    </Link>
+                    {/* <Link href="#contact"> */}
+                    <p className="text-sm md:text-lg    pt-1">Contact US</p>
+                    {/* </Link> */}
                     <div className="flex space-x-8 items-center text-primary_8 mt-10">
                         <HiOutlineMailOpen size={20} />
 

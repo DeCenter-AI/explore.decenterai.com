@@ -6,17 +6,18 @@ import Image from 'next/image'
 const Header = () => {
   return (
     <header
-      className="min-h-[400px] bg-center   bg-cover bg-no-repeat  ] relative"
+      className="min-h-[400px] bg-center   bg-cover bg-no-repeat   relative"
     >
 
       <Image
         src="/bg.png"
         alt="Decenter ai "
-        layout="fill"
-        objectFit="cover"
-        objectPosition="left"
+        width={1440}
+        height={275}
+        className='max-w-full max-h-full'
+
       />
-      <div className=" absolute  bg-black/50  inset-0 text-center flex flex-col gap-6 pt-20 pb-8 mx-auto">
+      <div className=" absolute  bg-black/30  inset-0 text-center flex flex-col gap-6 pt-20 pb-8 mx-auto">
         <h1 className="text-primary_2 text-center text-3xl sm:text-4xl lg:text-5xl font-logirentBold ">
           Explorer
         </h1>

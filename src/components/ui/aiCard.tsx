@@ -10,7 +10,8 @@ export default function AiCard({ detail }: { detail: any }) {
             <div className='max-w-[200px] h-[220px] flex flex-col border  px-6 py-4 rounded-3xl gap-3 border-primary_11 '>
                 <div className='h-[70%]'>
                     {/* @ts-ignore */}
-                    <Image className='min-h-full min-w-full' alt='' layout='intrinsic' priority width={154} height={144} src={urlFor(detail.mainImage).url()} />
+                    <Image className='min-h-full min-w-full' alt='' priority width={154} height={144} src={urlFor(detail.mainImage).url()} />
+
                 </div>
                 <div className='flex gap-2 flex-col h-[30%]  items-start'>
                     <div className=' '>
