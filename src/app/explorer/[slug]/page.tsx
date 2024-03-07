@@ -128,7 +128,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                             </span>
                         </div>
                         <div>
-                            <h2 className='mb-4 '>How to use</h2>
+                            {/* <h2 className='mb-4 '>How to use</h2> */}
                             <div className='flex flex-col gap-4'>
                                 {data?.usage && <PortableText value={data?.usage} components={components} />}
                             </div>
@@ -136,7 +136,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                         </div>
 
                         <div>
-                            <h2 className='mb-4 '>Prompts to use</h2>
+                            {/* <h2 className='mb-4 '>Prompts to use</h2> */}
                             <div className='flex flex-col gap-4'>
                                 {data?.prompts && <PortableText value={data?.prompts} components={components} />}
                             </div>
@@ -146,7 +146,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     </div>
 
                 </div>
-                yy
+
                 <div className='mt-10'>
                     <h1 className='font-logirentBold text-sm font-semibold text-center'>Similar Tools</h1>
                     <div className='w-full py-10'>
