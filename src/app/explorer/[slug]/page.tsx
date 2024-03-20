@@ -149,7 +149,11 @@ export default function Page({ params }: { params: { slug: string } }) {
                             {data?.telegram && <Link href={`${data?.telegram}`} target='_blank'> <PiTelegramLogoLight size={18} /></Link>}
                             {data?.xapp && <Link href={`${data?.xapp}`} target='_blank'><FaXTwitter size={15} /></Link>}
                         </div>
-                        {data?.address && <small onClick={() => handleCopy(data?.address)} className='hover:underline cursor-pointer text-center'>{truncateAddress(data?.address, 4, 4, 11)}</small>}
+                        <div className='flex justify-center space-x-2 items-center'>
+
+                            {data?.network && <small className='capitalize '>{data?.network}:</small>}
+                            {data?.address && <small onClick={() => handleCopy(data?.address)} className='hover:underline cursor-pointer '>{truncateAddress(data?.address, 4, 4, 11)}</small>}
+                        </div>
                     </div>
                     <div className='md:w-[85%] border flex mt-4 md:mt-0 flex-col gap-7 rounded-md border-primary_11 py-5 px-4'>
                         <div>

@@ -17,6 +17,7 @@ export type Post = {
   likes: number
   xapp: string
   address: string
+  network: string
   telegram: string
   linkedin: string
   discord: string
