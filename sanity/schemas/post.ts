@@ -90,6 +90,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'address',
+      title: 'Contract Address',
+      type: 'string',
+    }),
+    defineField({
       name: 'about',
       title: 'About',
       type: 'blockContent',
