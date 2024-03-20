@@ -104,13 +104,17 @@ export default defineType({
       name: 'usage',
       title: 'Usage',
       type: 'blockContent',
+
       // validation: (Rule) => Rule.required(),
+
     }),
     defineField({
       name: 'prompts',
       title: 'Prompts',
       type: 'blockContent',
+
       // validation: (Rule) => Rule.required(),
+
     }),
     defineField({
       name: 'likes',
