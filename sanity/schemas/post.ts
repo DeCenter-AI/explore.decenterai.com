@@ -90,6 +90,17 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'network',
+      title: 'Network',
+      type: 'string',
+    }),
+    defineField({
+      name: 'address',
+      title: 'Contract Address',
+      type: 'string',
+    }),
+
+    defineField({
       name: 'about',
       title: 'About',
       type: 'blockContent',
@@ -101,7 +112,6 @@ export default defineType({
       type: 'blockContent',
 
       // validation: (Rule) => Rule.required(),
-
     }),
     defineField({
       name: 'prompts',
@@ -109,7 +119,6 @@ export default defineType({
       type: 'blockContent',
 
       // validation: (Rule) => Rule.required(),
-
     }),
     defineField({
       name: 'likes',

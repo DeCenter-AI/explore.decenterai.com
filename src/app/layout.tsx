@@ -12,6 +12,8 @@ export const viewport: Viewport = {
   themeColor: '#fff',
 }
 
+import { Toaster, toast } from 'sonner'
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

@@ -16,6 +16,8 @@ import { CiLinkedin } from "react-icons/ci";
 import ViewPane from '@/components/ViewPane';
 import Nav from '@/components/Nav';
 import Footer from '@/components/ui/footer';
+import { Toaster, toast } from 'sonner';
+
 
 
 const components: PortableTextComponents = {
@@ -43,6 +45,15 @@ export default function Page({ params }: { params: { slug: string } }) {
     const category = searchParams.get('category');
     const [data, setData] = useState<Post | null>(null)
 
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = (text: string) => {
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Reset copied state after 2 seconds
+        toast("copied")
+    };
+
     const fetchPosts = async () => {
         const data: Post = await getPostBySlug(params.slug, category ? category : "")
         setData(data)
@@ -52,8 +63,27 @@ export default function Page({ params }: { params: { slug: string } }) {
         fetchPosts()
     }, [])
 
+
+    const truncateAddress = (
+        text: string,
+        startChars: number,
+        endChars: number,
+        maxLength: number
+    ) => {
+        if (text?.length > maxLength) {
+            var start = text.substring(0, startChars);
+            var end = text.substring(text.length - endChars, text.length);
+            while (start.length + end.length < maxLength) {
+                start = start + ".";
+            }
+            return start + end;
+        }
+        return text;
+    };
+
     return (
         <>
+            <Toaster />
             <Nav />
             {/*//! This should be split into individual components... */}
             <div className='w-[90%] md:w-[80%] flex flex-col gap-8 mx-auto mt-4  mb-12'>
@@ -113,11 +143,16 @@ export default function Page({ params }: { params: { slug: string } }) {
                         </div></Link>
 
 
-                        <div className='flex justify-between text-md text-neutral-500 py-3'>
+                        <div className='flex justify-center space-x-6 text-md text-neutral-500 py-3'>
                             {data?.discord && <Link href={`${data?.discord}`} target='_blank'> <RiDiscordLine size={18} /></Link>}
                             {data?.linkedin && <Link href={`${data?.linkedin}`} target='_blank'> <CiLinkedin size={18} /></Link>}
                             {data?.telegram && <Link href={`${data?.telegram}`} target='_blank'> <PiTelegramLogoLight size={18} /></Link>}
                             {data?.xapp && <Link href={`${data?.xapp}`} target='_blank'><FaXTwitter size={15} /></Link>}
+                        </div>
+                        <div className='flex justify-center space-x-2 items-center'>
+
+                            {data?.network && <small className='capitalize '>{data?.network}:</small>}
+                            {data?.address && <small onClick={() => handleCopy(data?.address)} className='hover:underline cursor-pointer '>{truncateAddress(data?.address, 4, 4, 11)}</small>}
                         </div>
                     </div>
                     <div className='md:w-[85%] border flex mt-4 md:mt-0 flex-col gap-7 rounded-md border-primary_11 py-5 px-4'>
@@ -153,7 +188,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                         <ViewPane selected={data ? data?.cat[0].title : "ALL ITEMS"} id={data ? data?._id : ""} />
                     </div>
                 </div>
-            </div>
+            </div >
             <Footer />
         </>
 

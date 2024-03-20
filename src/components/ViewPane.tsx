@@ -33,7 +33,7 @@ export default function ViewPane({ selected, id }: {
     }, [selected])
 
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-14'>
+        <div className='grid grid-cols-1  gap-10 place-items-center sm:place-content-stretch sm:mb-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4    '>
             {
                 data.map((detail, idx) => (
                     <AiCard key={idx} detail={detail} />
