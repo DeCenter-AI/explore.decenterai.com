@@ -22,11 +22,10 @@ const Header = () => {
           Explorer
         </h1>
         <p className="font-regular font-archivo text-primary_6  max-w-sm  sm:max-w-xl  md:max-w-2xl mx-auto text-base w-[90%] ">
-          Welcome to the Explorer, the ultimate source for the latest and most advanced AI
-          tools. We have gathered a comprehensive collection of innovative AI
-          technologies, all in one convenient location. Whether you are a seasoned AI
-          enthusiast or just starting out, the Explorer is designed to help you discover
-          and utilize the most cutting-edge AI tools available.
+          Welcome to your AI Explorer, the ultimate source for the latest and hottest AI Project.
+          We have gathered a comprehensive collection of innovative AI projects, all in one convenient location.
+          Whether you are a seasoned
+          AI enthusiast or just starting out, the Explorer is designed to help you discover the hottest AI Project.
         </p>
       </div>
     </header>
