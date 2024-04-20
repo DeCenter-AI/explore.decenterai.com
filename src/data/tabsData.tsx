@@ -2,7 +2,7 @@ import React from 'react'
 import { IconType } from 'react-icons'
 import { CiHeart, CiGrid41, CiMoneyBill, CiPower, CiFaceSmile } from 'react-icons/ci'
 import { IoCodeSlashOutline, IoColorPaletteOutline, IoGiftOutline, IoImage, IoImageOutline, IoMusicalNoteOutline } from 'react-icons/io5'
-import { TiPencil } from 'react-icons/ti'
+import { TiPencil, TiGroupOutline } from 'react-icons/ti'
 import { PiBrain, PiClipboard, PiFirstAid, PiFirstAidLight, PiFolderNotch, PiGameController, PiGuitar, PiHeartbeatLight, PiNewspaperClipping, PiNewspaperLight, PiPenNibStraight, PiSealWarningDuotone, PiShirtFolded, PiStudentLight, PiVideoCameraLight, PiWarehouseDuotone } from "react-icons/pi";
 import { BsBug, BsFillBrushFill } from 'react-icons/bs'
 import { CgGym, CgProfile } from "react-icons/cg";
@@ -11,6 +11,8 @@ import { AiOutlineExperiment, AiOutlineMail } from "react-icons/ai";
 import { LiaGavelSolid } from "react-icons/lia";
 import { TbPrompt } from "react-icons/tb";
 import { RiCustomerService2Line } from "react-icons/ri";
+import { FaNetworkWired } from "react-icons/fa6";
+
 
 export interface Tab {
   id: number
@@ -193,5 +195,15 @@ export const tabsData: Tab[] = [
     id: 35,
     icon: <PiWarehouseDuotone size={20} />,
     value: 'Real Estate',
+  },
+  {
+    id: 36,
+    icon: <FaNetworkWired size={20} />,
+    value: 'Infrastructure',
+  },
+  {
+    id: 37,
+    icon: <TiGroupOutline size={20} />,
+    value: 'Dao',
   },
 ]

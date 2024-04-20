@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { Suspense, useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { FaAngleDown } from "react-icons/fa6";
@@ -31,7 +31,11 @@ const ExplorerTab = () => {
           </ScrollArea>
           {tabsData.map((item) => (
             <TabsContent className='pt-10 ' value={item.value} key={item.id}>
-              {searchText.length == 0 && <ViewPane selected={item.value} />}
+              {searchText.length == 0 &&
+                <Suspense>
+                  <ViewPane selected={item.value} />
+                </Suspense>
+              }
               {searchText.length > 0 && <SearchViewPane text={searchText} />}
             </TabsContent>
           ))}

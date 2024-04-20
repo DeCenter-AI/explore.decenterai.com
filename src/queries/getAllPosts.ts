@@ -13,7 +13,7 @@ export const getAllPosts = async (start: number = 0, end: number = 9) => {
        categories[]->{
          title
        }
-}[$start..$end]`
+}[]`
 
   const params = {
     start,
