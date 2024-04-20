@@ -22,9 +22,11 @@ export default function ViewPane({ selected, id }: {
     }
 
     const fetchPostByCat = async () => {
+
         console.log(selected)
         const data = await getPostsByCategory(0, 9, selected.toUpperCase(), id ? id : "")
         console.log(data)
+
         data && setData(data[0].posts)
     }
 
